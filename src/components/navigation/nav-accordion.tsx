@@ -8,11 +8,13 @@ import {
 
 export const NavAccordion = () => {
   return (
-    <Accordion type="single" collapsible className="w-full lg:hidden">
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Event</AccordionTrigger>
+    <Accordion type="single" collapsible className="w-full gap-5 flex flex-col">
+      <AccordionItem value="item-1" className="border-0">
+        <AccordionTrigger className="font-bold text-lg border-0 py-0">
+          Event
+        </AccordionTrigger>
         <AccordionContent>
-          <ul>
+          <ul className="flex flex-col gap-6 text-lg py-5">
             <li>
               <Link href={"/academy"}>Arkavidia Academy</Link>
             </li>
@@ -31,10 +33,12 @@ export const NavAccordion = () => {
           </ul>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger>Competition</AccordionTrigger>
+      <AccordionItem value="item-2" className="text-lg border-0">
+        <AccordionTrigger className="font-bold border-0 text-lg py-0">
+          Competition
+        </AccordionTrigger>
         <AccordionContent>
-          <ul>
+          <ul className="flex flex-col gap-6 text-lg py-5">
             <li>
               <Link href={"/academy"}>Competitive Programming</Link>
             </li>
