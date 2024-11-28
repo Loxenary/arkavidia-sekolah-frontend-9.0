@@ -27,9 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo-arkavidia.ico" />
+        <title>Arkavidia Dave 1.0 | Competitive Programming</title>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      
         <Navbar />
         {children}
         <Footer />

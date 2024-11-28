@@ -12,10 +12,14 @@ export interface PrizeSectionProps {
 
 export const PrizeSection = ({ prizeList }: PrizeSectionProps) => {
   return (
-    <section className="bg-blue300 items-center flex justify-center w-full max-lg:flex-col py-20 gap-10">
-      <div>
+    <section className="bg-blue300 items-center flex justify-center w-full flex-col py-20 gap-10 relative">
+      <Image
+        alt="Star backgorund"
+        src={StarryStar}
+        className="absolute top-5 left-0"
+      />
+      <div className="relative w-full items-center justify-center flex">
         <h1 className="text-white font-black text-[3.5rem]">Prize</h1>
-        {/* <Image alt="Star backgorund" src={StarryStar} /> */}
       </div>
       <ul className="flex flex-col gap-4 w-full px-16">
         {prizeList.map((item, index) => (

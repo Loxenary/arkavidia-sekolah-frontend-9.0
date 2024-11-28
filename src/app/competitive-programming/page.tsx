@@ -7,8 +7,6 @@ import Line from "@images/line.svg";
 import WebLogo from "@images/web-icon.svg";
 
 const dummyData: CompetitiveProgrammingProps = {
-  finalDate: "31 December 2022",
-  finalTime: "23:59",
   contactData: [
     {
       src: Whatsapp,
@@ -103,7 +101,7 @@ const dummyData: CompetitiveProgrammingProps = {
       label: "First Solver on Final",
     },
   ],
-  time: "",
+
   timelineList: [
     {
       title: "Registration",
@@ -139,11 +137,8 @@ const dummyData: CompetitiveProgrammingProps = {
 const CompetitiveProgrammingPage = () => {
   return (
     <CompetitiveProgramming
-      finalDate={dummyData.finalDate}
-      finalTime={dummyData.finalTime}
       prizeList={dummyData.prizeList}
       timelineList={dummyData.timelineList}
-      time={dummyData.time}
       faqData={dummyData.faqData}
       contactData={dummyData.contactData}
     />

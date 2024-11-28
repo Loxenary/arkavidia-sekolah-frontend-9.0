@@ -43,7 +43,7 @@ export const Footer = () => {
               }}
             />
           </div>
-          <div className="md:hidden md:col-start-1 md:row-start-2">
+          <div className="md:hidden md:colf-start-1 md:row-start-2">
             <FooterContact />
           </div>
         </div>
