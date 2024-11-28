@@ -5,7 +5,7 @@ import GamePad from "@images/gamepad.svg";
 import { Button } from "../ui/button";
 export const CompetitiveProgrammingHeader = () => {
   return (
-    <div className="bg-[linear-gradient(90deg,_rgb(11,10,10)_2%,_transparent_1%),_linear-gradient(rgb(11,10,10)_2%,_transparent_1%)] bg-[length:80px_80px] w-full relative bg-[#feb20e] flex justify-center items-center flex-col pt-40 pb-20">
+    <section className="bg-[linear-gradient(90deg,_rgb(11,10,10)_2%,_transparent_1%),_linear-gradient(rgb(11,10,10)_2%,_transparent_1%)] bg-[length:80px_80px] w-full relative bg-yellow300 flex justify-center items-center flex-col pt-40 pb-20">
       {/* <Image
         src={Star}
         alt="Star Background"
@@ -41,6 +41,6 @@ export const CompetitiveProgrammingHeader = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

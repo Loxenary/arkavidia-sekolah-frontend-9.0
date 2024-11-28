@@ -51,6 +51,13 @@ export default {
           "5": "hsl(var(--chart-5))",
         },
         brownblack: "#110002",
+        red300: "#b71800",
+        blue300: "#0b1a5c",
+        yellow300: "#feb20e",
+        blue400: "#0b1a5c",
+        orange300: "#f43518",
+        green300: "#069154",
+        cream300: "#ffeadf",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -81,5 +88,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar")],
 } satisfies Config;

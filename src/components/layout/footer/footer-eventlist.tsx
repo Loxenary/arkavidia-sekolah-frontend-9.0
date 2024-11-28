@@ -1,45 +1,43 @@
 import Link from "next/link";
 
-export const FooterEventList = () => {
+interface EventItem {
+  href: string;
+  label: string;
+}
+
+interface EventListInterface {
+  title: string;
+  eventList: EventItem[];
+}
+
+const EventList = ({ title, eventList }: EventListInterface) => {
   return (
-    <div>
-      <div>
-        <h1>Competition</h1>
-        <ul>
-          <li>
-            <Link href={"cp"}>Compeitive Programming</Link>
+    <div className="flex flex-col gap-4">
+      <h1 className="text-center bg-black p-1 font-semibold text-[0.9rem] text-white">
+        {title}
+      </h1>
+      <ul>
+        {eventList.map((event, index) => (
+          <li key={index}>
+            <Link className="text-sm font-bold text-blue300" href={event.href}>{event.label}</Link>
           </li>
-          <li>
-            <Link href={"datavidia"}>Datavidia</Link>
-          </li>
-          <li>
-            <Link href={"arkalogica"}>Arkalogica</Link>
-          </li>
-          <li>
-            <Link href={"uxvidia"}>UXvidia</Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h1>Event</h1>
-        <ul>
-          <li>
-            <Link href={"cp"}>Arkavidia Academya</Link>
-          </li>
-          <li>
-            <Link href={"datavidia"}>Arkavidia For Indonesia</Link>
-          </li>
-          <li>
-            <Link href={"arkalogica"}>Arkavidia Goes to School</Link>
-          </li>
-          <li>
-            <Link href={"uxvidia"}>Arkavidia Talks</Link>
-          </li>
-          <li>
-            <Link href={"uxvidia"}>IT Fest</Link>
-          </li>
-        </ul>
-      </div>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export const FooterEventList = ({
+  competition,
+  event,
+}: {
+  competition: EventListInterface;
+  event: EventListInterface;
+}) => {
+  return (
+    <div className="flex flex-row border border-black bg-white py-4 px-10 justify-around">
+      <EventList title={"Competition"} eventList={competition.eventList} />
+      <EventList title={"Events"} eventList={event.eventList} />
     </div>
   );
 };

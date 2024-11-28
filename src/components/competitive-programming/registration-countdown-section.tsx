@@ -1,8 +1,8 @@
 import { handleDay } from "@/app/utils/time-utils";
-import Disk from "/images/disk.svg";
+import Disk from "@images/disk.svg";
 import { TimeCountdown } from "./time-countdown";
 
-interface RegistrationCountdownProps {
+export interface RegistrationCountdownProps {
   finalDate: string;
   finalTime: string;
 }
