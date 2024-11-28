@@ -19,10 +19,10 @@ const TimeCountdownItem = ({
   secondDigit,
 }: TimeCountdownItemProps) => {
   return (
-    <li>
-      <div>
-        <span>{firstDigit}</span>
-        <span>{secondDigit}</span>
+    <li className="flex flex-col gap-2 justify-center items-center">
+      <div className=" text-black font-black flex flex-row gap-4 text-[2rem]">
+        <span className="bg-white py-8 px-6 rounded-xl">{firstDigit}</span>
+        <span className="bg-white py-8 px-6 rounded-xl">{secondDigit}</span>
       </div>
       <h3>{label}</h3>
     </li>
@@ -31,7 +31,7 @@ const TimeCountdownItem = ({
 
 export const TimeCountdown = (props: TimeCountdownProps) => {
   return (
-    <ul>
+    <ul className="w-full justify-center items-center flex gap-16">
       <TimeCountdownItem
         label={"Days"}
         firstDigit={handleDaysDigit(props.time)[0]}

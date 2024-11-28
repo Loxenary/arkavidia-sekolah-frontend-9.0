@@ -13,15 +13,15 @@ export function handleRemainingTime(time: string) {
 
 // Handle the Digit of Days
 export function handleDaysDigit(time : string){
-  return handleRemainingTime(time).substring(0,1);
+  return handleRemainingTime(time).substring(0,2);
 }
 
 // Handle the Digit of Hours
 export function handleHoursDigit(time : string){
-  return handleRemainingTime(time).substring(3,4);
+  return handleRemainingTime(time).substring(3,5);
 }
 
 // Handle the digit of Minutes
 export function handleMinutesDigit(time : string){
-  return handleRemainingTime(time).substring(6,7);
+  return handleRemainingTime(time).substring(6,8);
 }

@@ -1,8 +1,8 @@
+import { CompetitiveProgramming } from "@/components/competitive-programming/main-container";
+
 const CompetitiveProgrammingPage = () => {
     return(
-        <div>
-            
-        </div>
+        <CompetitiveProgramming/>
     )
 }
 

@@ -12,18 +12,17 @@ export const RegistrationCountdownSection = ({
   finalTime,
 }: RegistrationCountdownProps) => {
   return (
-    <div className="flex flex-col">
-      <div className="bg-white border-y-2 border-black font-bold text-lg">
+    <div className="flex flex-col ">
+      <div className="bg-white border-y-4 border-black font-black text-lg">
         CLOSE REGISTRATION CLOSE REGISTRATION CLOSE REGISTRATION CLOSE
         REGISTRATION
       </div>
-      <div className="flex flex-col">
-        <h1>
+      <div className="flex flex-col bg-brownblack w-full text-white pt-10 pb-10 items-center jsutify-center gap-6">
+        <h1 className="max-lg:text-transparent text-white font-black text-[1.25rem]">
           {handleDay(finalDate)} , {finalDate} - {finalTime} WIB
         </h1>
-        <div>
-          <TimeCountdown time={finalDate + finalTime} />
-        </div>
+
+        <TimeCountdown time={finalDate + finalTime} />
       </div>
     </div>
   );

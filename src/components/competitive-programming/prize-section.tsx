@@ -14,8 +14,8 @@ export const PrizeSection = ({ prizeList }: PrizeSectionProps) => {
   return (
     <div>
       <div>
-        <h1>Prize</h1>
-        <Image alt="Star backgorund" src={StarryStar} />
+        <h1 className="text-white font-bold text-4xl">Prize</h1>
+        {/* <Image alt="Star backgorund" src={StarryStar} /> */}
       </div>
       <ul>
         {prizeList.map((item, index) => (

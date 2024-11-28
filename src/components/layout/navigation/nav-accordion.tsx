@@ -4,11 +4,11 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../ui/accordion";
+} from "../../ui/accordion";
 
 export const NavAccordion = () => {
   return (
-    <Accordion type="single" collapsible className="w-full gap-5 flex flex-col">
+    <Accordion type="single" collapsible className="w-full gap-5 flex flex-col lg:hidden">
       <AccordionItem value="item-1" className="border-0">
         <AccordionTrigger className="font-bold text-lg border-0 py-0">
           Event
