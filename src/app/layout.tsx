@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Navbar } from "@/components/layout/navbar";
+import { Navbar } from "@/components/layout/navigation/navbar";
 import { Footer } from "@/components/layout/footer/footer";
 
 const geistSans = localFont({
@@ -27,12 +27,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo-arkavidia.ico" />
+        <title>Arkavidia Dave 1.0 | Competitive Programming</title>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      
         <Navbar />
         {children}
-        {/* <Footer/> */}
+        <Footer />
       </body>
     </html>
   );

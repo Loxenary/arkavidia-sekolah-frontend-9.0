@@ -1,7 +1,9 @@
+import { useRemainingTime } from "@/app/context/remaining-time-context";
 import {
   handleDaysDigit,
   handleHoursDigit,
   handleMinutesDigit,
+  handleSecondsDigit,
 } from "@/app/utils/time-utils";
 
 interface TimeCountdownItemProps {
@@ -10,42 +12,53 @@ interface TimeCountdownItemProps {
   secondDigit: string;
 }
 
-export interface TimeCountdownProps {
-  time: string;
-}
 const TimeCountdownItem = ({
   label,
   firstDigit,
   secondDigit,
 }: TimeCountdownItemProps) => {
   return (
-    <li>
-      <div>
-        <span>{firstDigit}</span>
-        <span>{secondDigit}</span>
+    <li className="flex flex-col gap-2 justify-center items-center">
+      <div className=" text-black font-black flex flex-row gap-4 text-[1.5rem]">
+        <span className="bg-white py-6 px-4 rounded-xl border-2 border-black">
+          {firstDigit}
+        </span>
+        <span className="bg-white py-6 px-4 rounded-xl border-2 border-black">
+          {secondDigit}
+        </span>
       </div>
-      <h3>{label}</h3>
+      <h3 className="font-black text-white">{label}</h3>
     </li>
   );
 };
 
-export const TimeCountdown = (props: TimeCountdownProps) => {
+export const TimeCountdown = () => {
+  const { remainingTime } = useRemainingTime();
+  console.log("eXXE: ", remainingTime);
   return (
-    <ul>
+    <ul className="w-full justify-center items-center flex gap-4 relative">
       <TimeCountdownItem
         label={"Days"}
-        firstDigit={handleDaysDigit(props.time)[0]}
-        secondDigit={handleDaysDigit(props.time)[1]}
+        firstDigit={handleDaysDigit(remainingTime)[0]}
+        secondDigit={handleDaysDigit(remainingTime)[1]}
       />
+      <span className="text-black font-black text-4xl">:</span>
       <TimeCountdownItem
         label={"Hours"}
-        firstDigit={handleHoursDigit(props.time)[0]}
-        secondDigit={handleHoursDigit(props.time)[1]}
+        firstDigit={handleHoursDigit(remainingTime)[0]}
+        secondDigit={handleHoursDigit(remainingTime)[1]}
       />
+      <span>:</span>
       <TimeCountdownItem
         label={"Minutes"}
-        firstDigit={handleMinutesDigit(props.time)[0]}
-        secondDigit={handleMinutesDigit(props.time)[1]}
+        firstDigit={handleMinutesDigit(remainingTime)[0]}
+        secondDigit={handleMinutesDigit(remainingTime)[1]}
+      />
+      <span>:</span>
+      <TimeCountdownItem
+        label={"Seconds"}
+        firstDigit={handleSecondsDigit(remainingTime)[0]}
+        secondDigit={handleSecondsDigit(remainingTime)[1]}
       />
     </ul>
   );
